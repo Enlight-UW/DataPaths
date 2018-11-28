@@ -2,7 +2,7 @@
 
 
 
-
+volatile byte state = HIGH;
 
 int count = 0;
 
@@ -18,6 +18,7 @@ void setup() {
   pinMode(11,OUTPUT);
   pinMode(12,OUTPUT);
   pinMode(13,OUTPUT);
+  pinMode(4, OUTPUT);
 
 
 
@@ -26,7 +27,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-   digitalWrite(5,HIGH);
+   digitalWrite(5,LOW);
 
    digitalWrite(6,count & 1);
    digitalWrite(7,count & 2);
@@ -36,10 +37,10 @@ void loop() {
    digitalWrite(11,count & 32);
    digitalWrite(12, count & 64);
    digitalWrite(13, count & 128);
+   digitalWrite(4, state);
+   state = !state;
+   delay(800);
 
-
-    delay(800);
-
-    count++;
+   count++;
   
 }
