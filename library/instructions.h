@@ -10,8 +10,8 @@
 #define ROR 7
 #define ROL 8
 #define NOT 9
-#define STOLO 10
-#define STOHI 11
+#define IMMLO 10
+#define IMMHI 11
 #define SWAP 12
 #define CLEAR 13
 #define MUL 14
@@ -27,8 +27,8 @@ extern void do_sla();
 extern void do_ror();
 extern void do_rol();
 extern void do_not();
-extern void do_stolo();
-extern void do_stohi();
+extern void do_immlo();
+extern void do_immhi();
 extern void do_swap();
 extern void do_clear();
 extern void do_mul();
