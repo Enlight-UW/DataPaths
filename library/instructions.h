@@ -34,22 +34,7 @@ extern void do_clear();
 extern void do_mul();
 extern void do_div();
 
-void (*commands[])(void) = {
-    [ADD] = do_add,
-    [SUB] = do_sub,
-    [AND] = do_and,
-    [OR] = do_or,
-    [XOR] = do_xor,
-    [SRA] = do_sra,
-    [SLA] = do_sla,
-    [ROR] = do_ror,
-    [ROL] = do_rol,
-    [NOT] = do_not,
-    [STOLO] = do_stolo,
-    [STOHI] = do_stohi,
-    [SWAP] = do_swap,
-    [CLEAR] = do_clear,
-    [MUL] = do_mul,
-    [DIV] = do_div
-};
+extern void (*command_table[])(void);
+void do_command(int registers[]);
 #endif
+
