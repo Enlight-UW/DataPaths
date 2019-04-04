@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include "pinmap.h"
 /* Define arrays of 4 (or 2) pins which comprise the bits 
  * Instruction pins for the instruction board
  */ 
@@ -13,9 +14,9 @@ int REG_S[4] = {37, 39, 41, 43};
 /* Instruction pins for the ALU board */
 int ALU_INSTR[4] = {A0, A1, A2, A3};
 /* Register pins for the ALU board */
-int ALU_A[4] = {0,1,2,3};
-int ALU_B[4] = {29, 31, 33, 35};
-int ALU_S[4] = {37, 39, 41, 43};
+int ALU_A[4] = {2,3,4,5};
+int ALU_B[4] = {6, 7, 8, 9};
+int ALU_S[4] = {10, 11, 12, 13};
 
 
 /* convert digitalread of 4 pins into int */
@@ -49,12 +50,10 @@ void pin_setup(){
     pinMode4(ALU_B,INPUT);
     pinMode4(ALU_S,OUTPUT);
 #endif
-#ifdef BOARD_REG
     pinMode4(REG_INSTR,INPUT);
     pinMode4(REG_A,OUTPUT);
     pinMode4(REG_B,OUTPUT);
     pinMode4(REG_S,INPUT);
     pinMode(REG_CLOCK,INPUT);
     pinMode(REG_SWAP,INPUT);
-#endif
 }

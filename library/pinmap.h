@@ -13,8 +13,8 @@ extern int REG_B[4];
 extern int REG_S[4];
 
 /* Instruction pins for the ALU board */
-#define ALU_SWAP 13
-#define ALU_WRE  12
+#define ALU_SWAP A0
+#define ALU_WRE  A1
 extern int ALU_INSTR[4];
 /* Register pins for the ALU board */
 extern int ALU_A[4];
@@ -24,5 +24,6 @@ extern int ALU_CC[2];
 
 int digiread4(int pins[]);
 void digiwrite4(int pins[],int value);
+void pinMode4(int pins[], int mode);
 void pin_setup();
 #endif /*PINMAP_H*/
