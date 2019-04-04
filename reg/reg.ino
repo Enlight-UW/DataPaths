@@ -1,8 +1,10 @@
 #define BOARD_REG
 #include<pinmap.h>
+#include<regdisplay.h>
 
 int REGISTERS[4] = {2, 3, 0, 0};
 void setup(){
+  numDisplaySetup();
  pinMode4(REG_A,OUTPUT);
  pinMode4(REG_B,OUTPUT);
  pinMode4(REG_S,INPUT);
@@ -29,7 +31,7 @@ void wait_clock(){
   while(spin){
     int state = digitalRead(REG_CLOCK);
     if(state != last_state && state == LOW){
-      break; 
+      break;
     }
   }
 }
@@ -58,4 +60,6 @@ void loop(){
     Serial.write("rS = ");
     Serial.println(REGISTERS[3]);
     Serial.write("\n");
+    provideRegValues(REGISTERS);
+    numDisplayLoop();
 }
