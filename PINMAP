@@ -29,6 +29,9 @@ A0 - Swap Reg Cathode - A0
 
 
 Box Stuff: (On the left breadboard)
+Unlabelled red = 5V
+Unlabelled black = Ground
+Unlabelled Yellow = Clock
 
 From the box to the Uno:
 B0 - 28j - 28f - A2
