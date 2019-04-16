@@ -1,0 +1,63 @@
+Coground Everything!!!
+Everything is active high
+MEGA - BREADBOARD UNO
+
+Registers : (On the central breadboard)
+REG A (Blue)
+21 - 2a - 1i    2
+23 - 4a - 3i    3
+25 - 6a - 7i    4
+27 - 8a - 5i    5
+
+REG B (Yellow)
+29 - 12a - 11i  6
+31 - 14a - 13i  7
+33 - 16a - 15i  8
+35 - 18a - 17i  9
+
+REG S (Green)
+37 - 22a - 23i  10
+39 - 24a - 25i  11
+41 - 26a - 27i  12
+43 - 28a - 29i  13
+
+Control Signals (On Green Breadboard):
+Load Imm:
+A7 - Load Imm Cathode - 1
+A1 - Write Enable Cathode - A1
+A0 - Swap Reg Cathode - A0
+
+
+Box Stuff: (On the left breadboard)
+
+From the box to the Uno:
+B0 - 28j - 28f - A2
+B1 - 26j - 26f - A3
+B2 - 24j - 24f - A4
+B3 - 22j - 22f - A5
+From the box to the Mega:
+B4 - 18j - 18f - 4
+B5 - 16j - 16f - 5
+B6 - 12j - 12f - 6
+B7 - 10j - 10f - 7
+
+Clock (button) - j1 - 2
+
+
+7 Segment Display:
+Top Pins are numbered #0-5
+Bottom Pins are #6-11
+
+Connections are Mega to LCD
+40 - #10
+42 - #5
+44 - #11
+45 - #3
+46 - #4
+47 - #0
+48 - #1
+49 - #2
+50 - #6
+51 - #7
+52 - #8
+53 - #9
